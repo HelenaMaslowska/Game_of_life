@@ -27,7 +27,7 @@ static void fontInit()
 SDL_Renderer * graphics_init()
 {
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0) {printf("Error: %s\n", SDL_GetError()); return NULL;}
-    window = SDL_CreateWindow("Game of life", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH, HEIGHT, 0);
+    window = SDL_CreateWindow("The game of life", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH, HEIGHT, 0);
     SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     fontInit();
     return renderer;

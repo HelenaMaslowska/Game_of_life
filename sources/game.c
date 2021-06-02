@@ -40,7 +40,7 @@ int game_add_delete_element_on_keyboard(int pos_x, int pos_y)
 static int **create_board()
 {
     int **board = (int**)malloc(sizeof(int*)*(SQUARES_HEIGHT));
-    if(board == NULL)   { fputs("Error: \n", stderr); exit(2); }
+    //if(board == NULL)   { fputs("Error: \n", stderr); exit(2); }
     for(int i=0; i<SQUARES_HEIGHT; i++)
     {
         board[i] = (int*)malloc(sizeof(int)*(SQUARES_WIDTH));
@@ -102,7 +102,6 @@ void game_event(SDL_Renderer *renderer, SDL_Event *event)
             graphics_show_board(renderer);
         }
         SDL_RenderPresent(renderer);
-        //draw_every_scene();
     }
 }
 
